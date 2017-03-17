@@ -1,0 +1,28 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Бананы и линзы</title>
+    <link>$host$</link>
+    <description>Бананы и линзы</description>
+    $partial("templates/feed-item.xml")$
+    <image>
+      <url>$host$/img/logo_rss.png</url>
+      <title>Бананы и линзы</title>
+      <link>$host$</link>
+      <width>144</width>
+      <height>122</height>
+    </image>
+    <language>ru-ru</language>
+    <itunes:subtitle>Русскоязычный подкаст о Haskell</itunes:subtitle>
+    <itunes:author>Денис Шевченко, Александр Вершилов</itunes:author>
+    <itunes:summary>Русскоязычный подкаст о языке программирования Haskell и обо всём вокруг него.</itunes:summary>
+    <itunes:owner>
+      <itunes:name>Денис Шевченко</itunes:name>
+      <itunes:email>me@dshevchenko.biz</itunes:email>
+    </itunes:owner>
+    <itunes:image href="$host$/img/logo_itunes.png" />
+    <itunes:category text="Technology" />
+    <itunes:explicit>clean</itunes:explicit>
+    <atom:link href="$host$/feed.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

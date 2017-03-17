@@ -1,0 +1,11 @@
+$for(allEpisodes)$
+    <item>
+        <title>Выпуск $episodeNumber$: $title$</title>
+        <link>$host$/$url$</link>
+        <description><&#33;[CDATA[ $description$ ]]></description>
+        <itunes:summary><&#33;[CDATA[ $description$ ]]></itunes:summary>
+        <enclosure url="$host$/audio/episode$episodeNumber$.mp3" type="audio/mpeg" length="$episodeLength$"></enclosure>
+        <guid>$host$/$url$</guid>
+        <pubDate>$episodePubDate$</pubDate>
+    </item>
+$endfor$

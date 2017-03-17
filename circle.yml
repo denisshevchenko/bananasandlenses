@@ -1,0 +1,21 @@
+dependencies:
+  cache_directories:
+    - "~/.stack"
+  pre:
+    - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 575159689BEFB442
+    - echo 'deb http://download.fpcomplete.com/ubuntu precise main'|sudo tee /etc/apt/sources.list.d/fpco.list
+    - sudo apt-get update && sudo apt-get install stack -y
+  override:
+    - stack setup
+    - rm -rf _site
+    - ./just_build.sh
+
+test:
+  override:
+    - stack test
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - scp -r _site/* dshevchenko@bananasandlenses.net:public_html/
