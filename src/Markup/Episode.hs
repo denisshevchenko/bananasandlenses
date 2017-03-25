@@ -17,8 +17,12 @@ episodeTemplate = readTemplate . renderHtml $ raw
 raw :: Html
 raw = do
     div ! A.class_ "episode-h1" $ do
-        span ! A.class_ "name-of-category-h1" $ "№ $episodeNumber$"
-        span $ "$title$"
+        div ! A.class_ "row" $ do
+            div ! A.class_ "col-lg-2 col-md-3 col-sm-12 col-xs-12 episode-number-h1-area" $
+                span ! A.class_ "episode-number-h1" $ "№ $episodeNumber$"
+
+            div ! A.class_ "col-lg-10 col-md-9 col-sm-12 col-xs-12" $
+                span $ "$title$"
 
     div ! A.class_ "episode-metadata" $ do
         div ! A.class_ "episode-date-inside" $ "$date$"
@@ -27,9 +31,9 @@ raw = do
     div $ "$body$"
     div ! A.class_ "social-buttons-separator" $ ""
     
-    div ! A.class_ "row audio-record" $ do
-        div ! A.class_ "col-lg-8 col-md-8 col-sm-8 col-xs-12" $ preEscapedToHtml audioRecord
-        div ! A.class_ "col-lg-4 col-md-4 col-sm-4 col-xs-12" $
+    div ! A.class_ "audio-record" $ do
+        div $ preEscapedToHtml audioRecord
+        div ! A.class_ "download-button-area" $
             a ! A.href "/audio/episode$episodeNumber$.mp3" ! A.id "sl-2" ! A.title "Скачать MP3" $
                 i ! A.class_ "fa fa-download download-button" ! customAttribute "aria-hidden" "true" $ ""
 

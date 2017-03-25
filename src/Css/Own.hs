@@ -21,7 +21,6 @@ ownCss = Lazy.toStrict . render $ do
 
         marginTopPx     = marginTop . px
         marginBottomPx  = marginBottom . px
-        marginLeftPx    = marginLeft . px
         marginRightPx   = marginRight . px
         marginAuto      = margin (px 0) auto (px 0) auto
 
@@ -204,7 +203,7 @@ ownCss = Lazy.toStrict . render $ do
     ".rss-color" ? do
         color           "#FF924A"
 
-    ".name-of-category" ? do
+    ".episode-number" ? do
         fontSizePct     85
         border          solid (px 1) "#f04436"
         borderRadius    (px 3) (px 3) (px 3) (px 3)
@@ -214,7 +213,6 @@ ownCss = Lazy.toStrict . render $ do
         paddingBottomPx 3
         paddingLeftPx   5
         paddingRightPx  5
-        marginRightPx   22
 
     ".episode-info" ? do
         color           "#777"
@@ -285,8 +283,12 @@ ownCss = Lazy.toStrict . render $ do
     ".episode-title" ? do
         fontSizePct     115
 
+    ".episode-number-in-list" ? do
+        fontSizePct     115
+        paddingBottomPx 10
+
     ".episode-description" ? do
-        paddingLeftPx   90
+        -- paddingLeftPx   90
         fontSizePct     75
         color           "#777"
 
@@ -295,12 +297,12 @@ ownCss = Lazy.toStrict . render $ do
         fontWeight700
 
     ".episode-h1" ? do
-        centerAlign
+        -- centerAlign
         fontSizePct     200
         paddingBottomPx 26
 
-    ".name-of-category-h1" ? do
-        fontSizePct     99
+    ".episode-number-h1" ? do
+        fontSizePct     90
         border          solid (px 1) "#f04436"
         borderRadius    (px 3) (px 3) (px 3) (px 3)
         backgroundColor "#ea4d41"
@@ -308,11 +310,14 @@ ownCss = Lazy.toStrict . render $ do
         paddingTopPx    3
         paddingBottomPx 3
         paddingLeftPx   9
-        paddingRightPx  0
-        marginRightPx   22
+        paddingRightPx  9
+    
+    ".episode-number-h1-area" ? do
+        paddingBottomPx 40
 
     ".episode-metadata" ? do
-        centerAlign
+        leftAlign
+        paddingBottomPx 20
 
     ".name-of-tag-in-episode" ? do
         border          solid (px 1) "#a0d1fa"
@@ -322,12 +327,12 @@ ownCss = Lazy.toStrict . render $ do
         paddingBottomPx 4
         paddingLeftPx   8
         paddingRightPx  8
-        marginLeftPx    8
-        marginRightPx   8
+        marginRightPx   20
 
     ".episode-date" ? do
-        fontSizePct     100
+        fontSizePct     95
         rightAlign
+        paddingTopPx    5
 
     ".episode-date-inside" ? do
         fontSizePct     120
@@ -342,3 +347,7 @@ ownCss = Lazy.toStrict . render $ do
     
     ".download-button" ? do
         fontSizePct     140
+
+    ".download-button-area" ? do
+        centerAlign
+        paddingTopPx    20
