@@ -346,7 +346,7 @@ ownCss = Lazy.toStrict . render $ do
         paddingBottomPx 50
     
     ".download-button" ? do
-        fontSizePct     140
+        fontSizePct     155
 
     ".download-button-area" ? do
         centerAlign

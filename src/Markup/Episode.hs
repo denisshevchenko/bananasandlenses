@@ -34,7 +34,10 @@ raw = do
     div ! A.class_ "audio-record" $ do
         div $ preEscapedToHtml audioRecord
         div ! A.class_ "download-button-area" $
-            a ! A.href "/audio/episode$episodeNumber$.mp3" ! A.id "sl-2" ! A.title "Скачать MP3" $
+            a ! A.href "$host$/audio/episode$episodeNumber$.mp3"
+              ! A.id "sl-2"
+              ! A.title "Скачать MP3"
+              ! customAttribute "download" "$host$/audio/episode$episodeNumber$.mp3" $
                 i ! A.class_ "fa fa-download download-button" ! customAttribute "aria-hidden" "true" $ ""
 
     div ! A.id "socialButtons" $ preEscapedToHtml socialButtons
@@ -43,7 +46,7 @@ raw = do
 
 audioRecord :: String
 audioRecord = [s|
-<audio controls style="width: 100%;"><source src="/audio/episode$episodeNumber$.mp3" type="audio/mp3"></audio>
+<audio controls style="width: 100%;"><source src="$host$/audio/episode$episodeNumber$.mp3" type="audio/mp3"></audio>
 |]
 
 socialButtons :: String
