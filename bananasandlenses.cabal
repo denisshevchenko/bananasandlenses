@@ -5,13 +5,14 @@ name:                bananasandlenses
 version:             2.0.0.0
 synopsis:            Russian podcast about Haskell and FP
 
-homepage:            http://bananasandlenses.net
+homepage:            https://bananasandlenses.net
 
 license: 	     MIT
 license-file:        LICENSE
 
 author:              Denis Shevchenko
 maintainer:          me@dshevchenko.biz
+bug-reports:         https://github.com/denisshevchenko/bananasandlenses/issues
 
 category:            Web
 build-type:          Simple

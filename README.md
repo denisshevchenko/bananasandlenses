@@ -2,4 +2,4 @@
 
 # Бананы и Линзы
 
-Подкаст о Haskell. Мы живём [здесь](http://bananasandlenses.net).
+Подкаст о Haskell. Мы живём [здесь](https://bananasandlenses.net).
