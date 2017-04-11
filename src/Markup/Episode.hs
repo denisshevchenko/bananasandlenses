@@ -37,7 +37,7 @@ raw = do
             a ! A.href "$host$/audio/episode$episodeNumber$.mp3"
               ! A.id "sl-2"
               ! A.title "Скачать MP3"
-              ! customAttribute "download" "$host$/audio/episode$episodeNumber$.mp3" $
+              ! customAttribute "download" "episode$episodeNumber$.mp3" $
                 i ! A.class_ "fa fa-download download-button" ! customAttribute "aria-hidden" "true" $ ""
 
     div ! A.id "socialButtons" $ preEscapedToHtml socialButtons
