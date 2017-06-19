@@ -37,6 +37,8 @@ raw = do
             preEscapedToHtml ("<br/>" :: String)
             span "Если у вас есть вопросы, пожелания или предложения — пишите"
             a ! A.href "mailto:me@dshevchenko.biz" $ "Денису Шевченко"
+            span ", "
+            a ! A.href "mailto:denis.redozubov@gmail.com" $ "Денису Редозубову"
             span " или "
             a ! A.href "mailto:alexander.vershilov@gmail.com" $ "Александру Вершилову"
             span "."
